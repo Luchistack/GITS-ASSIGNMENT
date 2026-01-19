@@ -1,21 +1,13 @@
-#WElcome to iya Scambirah pizza joint Ajegunle
-#collect customer order
-#display available pizza and cost and quantity
-#what type of pizza do you want to buy (pizza type = odugwu) ----- cntr + shift u, 20a6 to get ₦ sign
-#How many people are you looking at....at least one slice for each guest of 45, (NUmber of people = 45)
-#How many boxes of pizza would you love to buy (4 boxes)
-#How many total slice in the total number of packs (enough for 45 people), each contains 12 slice per box, total of 4 boxes is 48
-#Display how many will be leftover slice  after all guest have been served
-#How much the customer has to pay for it, bill is(prices = 16800)( 4200 per box for 4 boxes))
+
+#this program acts like a pizza shop assistant.
+#It shows the menu, collects customer choices, calculates slices, checks leftovers, and prints the final bill in naira
 
 
-#PIZZAS PRICE INITIALIZATION
 supa_price = 2000
 small_price = 3000
 big_boys_price = 3600
 odugwu_price = 4200 
 
-#PIZZAS SLICES INITIALIZAION
 supa_size_slices = 4
 small_money_slices = 5
 big_boys_slices = 8
@@ -30,56 +22,58 @@ def menu():
         Here are The list of Pizzas avaiable below
         ==========================================
 
-        1. Supa size @ ₦2000
-        2. Small Money @ ₦3000
-        3. Big Boys @ ₦3600
-        4. Odugwu @ ₦4200
+        1. Supa size pizza @ ₦2000
+        2. Small Money pizza @ ₦3000
+        3. Big Boys pizza @ ₦3600
+        4. Odugwu pizza @ ₦4200
         5. Quit
 
         Select from the available options or enter 5 to quit
         """)
 
 
-menu()
 
-selected_pizza_type = input("what type of pizza do you want to buy: ").lower()
+
+while True:
+    menu()
+
+    selected_pizza_type = input("what type of pizza do you want to buy: ").lower()
 
 def details(selected_pizza_type):
     match selected_pizza_type:
-        case "1":
+        case "supa size":
             print("======================================")
             print(f"you just selected {selected_pizza_type} @ Supa size pizza")
             print(f"Supa size pizza costs ₦{supa_price}")
             print("============================")
 
-        case "2":
+        case "small money":
             print("=======================================")
             print(f"you just selected {selected_pizza_type} @ Small Money pizza")
             print(f"Small money pizza costs ₦{small_price}")
             print("============================")
 
 
-        case "3":
+        case "big boys":
             print("=======================================")
             print(f"you just selected {selected_pizza_type} @ Big Boys pizza")
             print(f"Big boys pizza costs ₦{big_boys_price}")
             print("=============================")
 
-        case "4":
+        case "odugwu pizza":
             print("=======================================")
             print(f"you just selected {selected_pizza_type} @ Odugwu pizza")
             print(f"Odogwu pizza costs ₦{odugwu_price}")
             print("=============================")
 
 
-        case "5": 
+        case "quit": 
             print("Thank you for shopping with us")
-            exit()
-                
+        break
 
         case _:
-                print("Invalid pizza selection!")
-                exit()
+            print("Invalid pizza selection!")
+              
 
 
 details(selected_pizza_type)
@@ -99,7 +93,7 @@ print("=============================")
 def pizza_type(selected_pizza_type):
 
     match selected_pizza_type:
-        case "1":
+        case "supa size":
             cost = supa_price * boxes
             total_slices = supa_size_slices * boxes
             total = supa_price * boxes
@@ -114,7 +108,7 @@ def pizza_type(selected_pizza_type):
             print(f"\nThere will be {left_over} left over pizzas after all guest have been served a pizza each")
      
 
-        case "2":
+        case "small money":
             cost = small_price * boxes
             total_slices = small_money_slices * boxes
             total = small_price * boxes
@@ -127,7 +121,7 @@ def pizza_type(selected_pizza_type):
             print(f"Total slices of pizzas in {boxes} boxes are {total_slices}")
             print(f"\nThere will be {left_over} left over pizzas after all guest have been served a pizza each")
 
-        case "3":
+        case "big boys":
             cost = big_boys_price * boxes
             total_slices = big_boys_slices * boxes
             total = big_boys_price * boxes
@@ -139,7 +133,7 @@ def pizza_type(selected_pizza_type):
             print("===================")
             print(f"Total slices of pizzas in {boxes} boxes are {total_slices}")
             print(f"\nThere will be {left_over} left over pizzas after all guest have been served a pizza each")
-        case "4":
+        case "odugwu":
             cost = odugwu_price * boxes
             total_slices = odugwu_slices * boxes
             total = odugwu_price * boxes
@@ -152,7 +146,7 @@ def pizza_type(selected_pizza_type):
             print(f"Total slices of pizzas in {boxes} boxes are {total_slices}")
             print(f"\nThere will be {left_over} left over pizzas after all guest have been served a pizza each")
 
-        case "5": 
+        case "Quit": 
             print("Thank you for shopping with us")
             exit()
                 

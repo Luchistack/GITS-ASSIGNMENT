@@ -3,7 +3,7 @@
 
 
 #using def, define the function name  menu()
-#print the menus from number  to the last menu
+#print the menus from number one to the last menu
 #Display them differently
 #display 6 for exit after all variables have been displayed or printed
 #ask user to enter an operation, meaning to select an option from the menu or varible displayed
@@ -39,7 +39,6 @@ import random
 
 
 def menu():
-      select = int(input("Would you like another suggestion? (yes/no): ")).lower()
       print('Welcome to book suggestion library!')
       print("1. Get Suggestion")
       print("2. Add Book")
@@ -91,9 +90,12 @@ def get_suggestion():
 
             print(f"Book of the Day:\n\tBook Title: {book}\n\tPage: {page}")
 
-            select = int(input("Would you like another suggestion? (yes/no): ")).lower()
+            select = input("Would you like another suggestion? (yes/no): ").lower()
+            
+            if select == "yes":     
+              get_suggestion()
      
-            if select == "no":
+            elif select == "no":
               print("stopped")
               menu()
               
@@ -107,11 +109,10 @@ get_suggestion()
 
 
 def add__new_books():
-          new_book = int(input("Enter a book title: ")).lower()
+          new_book =input("Enter a book title: ").lower()
           print("Book added Successfully")
 
           
           
           
 add_new_books()
-menu()

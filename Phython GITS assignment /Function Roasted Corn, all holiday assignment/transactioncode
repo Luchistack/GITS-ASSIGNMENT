@@ -1,0 +1,8 @@
+#Start the program by Initializing values, from cost to number of slices for each pizza type, i will prepare variables to track transactions by Setting balance, deposit, and withdrawal to zero
+#display a welcoming message for the name of the app 
+#Show a menu to the user by displaying menu using a function called def menu(): with the menu printed in it
+#apply a while true loop to Keep the program running
+#Process user choice by using match-case to decide what to do by a particular input is selected
+
+
+for transaction app

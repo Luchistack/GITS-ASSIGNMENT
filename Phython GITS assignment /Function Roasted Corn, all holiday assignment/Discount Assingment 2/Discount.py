@@ -1,6 +1,6 @@
-item = input("Enter name of item: ")
+item = input("Enter name of item to buy: ")
 price = int(input("Enter price of item: "))
-code = input("Enter promotional code in CAPITAL LETTER: ")
+code = input("Enter promotional code: ").upper()
 
 discount_one= price - 10
 discount_two = price / 2
@@ -13,4 +13,5 @@ elif code == "HALFOFF":
         print("Your discount payment is: ", discount_two)     
 else:
         print('No discount')
+        print("Your discount payment is: ", price)   
 
