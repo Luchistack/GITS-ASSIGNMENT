@@ -22,12 +22,18 @@ collection_table()
 
 
 
-riders_name = input("\nEnter Riders Name: ")
+riders_name = input("\nEnter Riders Name: ").strip()
 print(f"\nDear {riders_name}, Lets check the tasks you made today")
+
+#if riders_name = " ":
+#    print("invalid name, enter a name")
+#    exit()
 
 collection_rate = int(input("\nEnter Number Of Succcessfull Delivery Done Today: "))
 
-
+if collection_rate < 0 or collection_rate > 100:
+    print("\nInvalid Entry! Collection rate must be between 0 and 100.")
+    exit()
 
 
 def collection_pay(collection_rate):

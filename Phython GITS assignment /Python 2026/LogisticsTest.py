@@ -10,7 +10,7 @@ class TestCollectionPay(unittest.TestCase):
         self.assertEqual(collection_pay(65), 21250)
 
     def test_50_to_59(self):
-        self.assertEqual(collection_pay(55), 16000) #self.assertEqual, compares expected vs actual result
+        self.assertEqual(collection_pay(55), 16000) 
 
     def test_below_50(self):
         self.assertEqual(collection_pay(40), 11400)
