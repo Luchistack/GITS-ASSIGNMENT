@@ -1,0 +1,13 @@
+pizza code
+
+#WElcome to iya Scambirah pizza joint Ajegunle
+#collect customer order
+#display available pizza and cost and quantity
+#what type of pizza do you want to buy (pizza type = odugwu) ----- cntr + shift u, 20a6 to get ₦ sign
+#How many people are you looking at....at least one slice for each guest of 45, (NUmber of people = 45)
+#How many boxes of pizza would you love to buy (4 boxes)
+#How many total slice in the total number of packs (enough for 45 people), each contains 12 slice per box, total of 4 boxes is 48
+#Display how many will be leftover slice  after all guest have been served
+#How much the customer has to pay for it, bill is(prices = 16800)( 4200 per box for 4 boxes))
+#
+#
